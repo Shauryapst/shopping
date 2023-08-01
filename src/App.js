@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; // Us
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import Home from './features/Home/Home';
+import Men from './features/Men/Men';
 
-const Men = () => <p>Men's collection</p>;
+
 const Women = () => <p>Women's collection</p>;
 const Kids = () => <p>Kids' collection</p>;
 
