@@ -1,0 +1,12 @@
+.product-section {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    justify-content: space-between;
+}
+
+.product-page{
+    padding: 40px;
+    width: 80vw;
+}
