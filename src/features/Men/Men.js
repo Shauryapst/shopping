@@ -1,10 +1,9 @@
-import React from 'react';
-import CardSmall from '../../components/Card/CardSmall/CardSmall';
+import React from "react";
 
-const Men = () => {
-  return (
-    <CardSmall/>
-  )
-}
+import ProductPage from "../../components/ProductPage/ProductPage";
 
-export default Men
+const Men = (props) => {
+  return <ProductPage category={`men's clothing`}/>;
+};
+
+export default Men;

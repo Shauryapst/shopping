@@ -17,4 +17,11 @@
     object-fit: cover;
    
   }
+  .blurred-image {
+    
+    width: 100%;
+    height: auto;
+    filter: blur(20px); 
+    transition: filter 0.3s ease-in-out;
+  }
   

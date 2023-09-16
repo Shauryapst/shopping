@@ -4,10 +4,8 @@ import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import Home from './features/Home/Home';
 import Men from './features/Men/Men';
-
-
-const Women = () => <p>Women's collection</p>;
-const Kids = () => <p>Kids' collection</p>;
+import Women from './features/Women/Women';
+import Jewelery from './features/Jewelery/Jewelery';
 
 const App = () => {
   return (
@@ -22,7 +20,7 @@ const App = () => {
             <Route path="/" exact component={Home} />
             <Route path="/men" component={Men} />
             <Route path="/women" component={Women} />
-            <Route path="/kids" component={Kids} />
+            <Route path="/jewelery" component={Jewelery} />
           </Switch>
         </section>
 

@@ -1,36 +1,68 @@
+/* ProductCard.css */
+
+/* Base styles for the product card */
 .product-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    width: 250px;
-    height: 300px;
-    background-color: bisque;
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 250px;
-    object-fit:fill;
-    border-radius: 8px;
-  }
-  
-  .product-details {
-    margin-top: 12px;
-  }
-  
-  .product-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .product-price {
-    font-size: 16px;
-    margin: 8px 0 0;
-  }
-  
+  margin: 20px 0;
+  width: 225px;
+  height: 350px; /* Set a fixed height for the product card */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.product-image-container {
+  flex: 80%; /* The image container takes up the available space */
+  position: relative; /* Position the image container */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.product-image {
+  max-height:100%;
+  max-width:100%;
+  width: 100%;
+  height: 100%; /* Fill the container while maintaining aspect ratio */
+  /* object-fit: cover; Preserve aspect ratio and cover the container */
+}
+
+.product-details {
+  flex: 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.product-title {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 100;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #007bff;
+}
+
+.product-rating {
+  color: #f39c12;
+  font-size: 1.2rem;
+}
+
+/* Button styles */
+.add-to-cart-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

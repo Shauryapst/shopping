@@ -1,16 +1,26 @@
-import React from 'react';
+import React from "react";
 import "./CardSmall.css";
 
-function CardSmall() {
+const CardSmall = (props) => {
   return (
-    <div class="product-card">
-        <img src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg" alt="" class="product-image"/>
-        <div class="product-details">
-            <h3 class="product-name">Product Name</h3>
-            <p class="product-price">$19.99</p>
+    <div className="product-card">
+      <div className="product-image-container">
+        <img src={props.data.image} alt="" className="product-image" />
+      </div>
+      <div className="product-details">
+        <h2 className="product-title">{props.data.title}</h2>
+        <p className="product-price">${props.data.price}</p>
+        <div className="product-rating">
+          {Array.from({ length: props.data.rating.rate }).map((_, index) => (
+            <span key={index} className="star">
+              &#9733;
+            </span>
+          ))}
         </div>
+      </div>
+      <button className="add-to-cart-button">Add to Cart</button>
     </div>
-  )
-}
+  );
+};
 
 export default CardSmall;
