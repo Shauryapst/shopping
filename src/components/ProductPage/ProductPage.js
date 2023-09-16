@@ -37,6 +37,7 @@ const ProductPage = (props) => {
       .catch((error) => {
         console.error(`Error fetching ${props.category} data:`, error);
       });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (loading) {
