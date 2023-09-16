@@ -1,11 +1,11 @@
 import React, {useState } from 'react'
 import './FilterSection.css';
 
-export const FilterSection = () => {
+export const FilterSection = (props) => {
+  console.log(props.handleSliderChange());
    const [sliderValue, setSliderValue] = useState(1000);
    const handleSliderChange = (newValue) => {
     setSliderValue(newValue);
-    
   };
   return (
     <div className="filter-section">
