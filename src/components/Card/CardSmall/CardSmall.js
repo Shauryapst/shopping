@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./CardSmall.css";
 
 const CardSmall = (props) => {
   return (
-    <div className="product-card">
+    <Link to={`/category/product/${props.data.id}`} className="product-card">
       <div className="product-image-container">
         <img src={props.data.image} alt="" className="product-image" />
       </div>
@@ -18,8 +19,8 @@ const CardSmall = (props) => {
           ))}
         </div>
       </div>
-      <button className="add-to-cart-button">Add to Cart</button>
-    </div>
+      {/* <button className="add-to-cart-button">Add to Cart</button> */}
+    </Link>
   );
 };
 

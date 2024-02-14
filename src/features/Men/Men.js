@@ -1,9 +1,9 @@
 import React from "react";
 
-import ProductPage from "../../components/ProductPage/ProductPage";
+import CategoryPage from "../../components/CategoryPage/CategoryPage";
 
 const Men = (props) => {
-  return <ProductPage category={`men's clothing`}/>;
+  return <CategoryPage category={`men's clothing`}/>;
 };
 
 export default Men;

@@ -1,7 +1,25 @@
-.App {
+.app {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.nav-section{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
 }
 
 .center-section{
   text-align: center;
+  margin-top: 200px;
+  flex: 1;
+}
+
+.footer{
+  margin-top: auto;
 }
