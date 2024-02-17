@@ -1,0 +1,25 @@
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    right: -25%;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .cart-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .cart-overlay.open {
+    right: 0;
+  }
+  
