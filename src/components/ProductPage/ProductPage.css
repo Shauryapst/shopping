@@ -1,33 +1,156 @@
 .product-page {
-  max-width: 960px;
-  margin: 0 auto;
+  height: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.product-wrapper {
   display: flex;
   justify-content: space-between;
+  margin: 10px;
+  padding: 5px;
+  gap: 10px;
+}
+
+.image-section {
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.product-image {
+  max-height: 100%;
+  max-width: 100%;
+  width: 50%;
+}
+
+.detail-section {
+  background-color: #e9ecef;
+  padding: 20px;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  flex: 0%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.description {
+  flex: 30%;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #666;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.product-operation {
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  gap: 5px;
+  width: 60%;
+  max-width: 250px;
+}
+
+.product-add-del-count {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  border: #666 solid 2px;
+  justify-content: space-between;
+}
+
+.product-add-del-count button {
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 1px;
+  width: 33%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  background-color: rgb(237, 237, 237);
+  justify-content: space-around;
+  border: none;
+  transition: all 0.2s;
+}
+.product-add-del-count button:hover {
+  color: #222121;
+  background-color: transparent;
+}
+.product-add-del-count p {
+  width: 33%;
+  font-size: 1.1rem;
+  background-color: none;
+  border: none;
+  align-items: center;
+  font-weight: 550;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.add-to-cart {
+  height: 40px;
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1a1a1a;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
   width: 100%;
+
+  will-change: transform;
 }
 
-.filter-section {
-  width: 30%;
-  margin: 20px;
-  max-width: 100px;
-  height: 100px;
-  padding: 30px;
+.add-to-cart:disabled {
+  pointer-events: none;
 }
 
-@media screen and (min-width: 768px) {
-
-  /* For screens wider than 768px, display a 2-column grid */
-  .product-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
+.add-to-cart:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
 }
 
-@media screen and (min-width: 1024px) {
-
-  /* For screens wider than 1024px, display a 3-column grid */
-  .product-section {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.add-to-cart:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
