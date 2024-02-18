@@ -1,0 +1,63 @@
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px; /* Add some space at the bottom */
+  border-bottom: 1px solid #ccc; /* Add a border at the bottom */
+}
+
+.cart-item-image {
+  flex: 0 0 100px; /* Adjust the width of the image container */
+  margin-right: 20px;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: auto;
+}
+
+.cart-item-price{
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-item-title{
+  margin: 0;
+  font-size: 18px; 
+  text-align: left;
+}
+
+.price-and-count {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center; /* Vertically center price and count */
+}
+
+.add-del-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: #666 solid 1.5px;
+}
+
+.add-del-counter button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.add-del-counter .quantity {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}

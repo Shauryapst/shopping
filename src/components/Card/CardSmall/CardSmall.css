@@ -28,8 +28,7 @@
   max-height:100%;
   max-width:100%;
   width: 75%;
-  height: 75%; /* Fill the container while maintaining aspect ratio */
-  /* object-fit: cover; Preserve aspect ratio and cover the container */
+  /* height: 75%; */
 }
 
 .product-details {
