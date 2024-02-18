@@ -11,18 +11,17 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const item = action.payload.data;
+      const {quantity, ...item} = action.payload;
       const id = item.id;
-      console.log(id);
 
       const existingItem = state.cartItems[id];
-      const count = existingItem ? existingItem.count + 1 : 1;
-      state.count += 1;
-      state.cartItems[id] = { ...item, count }; // Store object along with count
-      state.totalPrice += item.price;
+      const count = existingItem ? existingItem.count + quantity : quantity;
+      state.count += quantity;
+      state.cartItems[id] = { ...item, count };
+      state.totalPrice += item.price*quantity;
     },
     removeFromCart: (state, action) => {
-      const item = action.payload.data;
+      const {...item} = action.payload;
       const {id, price} = item;
       const existingItem = state.cartItems[id];
       if (!existingItem) return;

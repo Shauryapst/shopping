@@ -8,6 +8,9 @@ import Women from "./features/Women/Women";
 import Jewelery from "./features/Jewelery/Jewelery";
 import Footer from "./components/Footer/Footer";
 import ProductPage from "./components/ProductPage/ProductPage";
+import Cart from "./features/Cart/Cart";
+
+
 
 const App = () => {
   return (
@@ -25,15 +28,19 @@ const App = () => {
             <Route path="/category/men" component={Men} />
             <Route path="/category/women" component={Women} />
             <Route path="/category/jewelery" component={Jewelery} />
-            <Route path="/category/:categoryName/:productId" component={ProductPage} />
+            <Route path="/cart" component={Cart}/>
+            <Route
+              path="/category/:categoryName/:productId"
+              component={ProductPage}
+            />
           </Switch>
         </section>
+        <Cart/>
         {/* Rest of your application content */}
         {/* Add more sections as needed */}
         <section className="footer">
-        <Footer/>
+          <Footer />
         </section>
-        
       </div>
     </Router>
   );
