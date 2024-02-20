@@ -1,14 +1,17 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { addToCart, removeFromCart } from "../../slices/cartSlice";
 import "./CartItem.css";
 
-const CartItem = ({ imageUrl, price, title, quantity }) => {
+const CartItem = ({ id ,imageUrl, price, title, quantity }) => {
   const dispatch = useDispatch();
 
   const handleIncrement = () => {
+    dispatch(addToCart({id, quantity:1}))
   };
 
   const handleDecrement = () => {
+    dispatch(removeFromCart({id}))
   };
 
   return (

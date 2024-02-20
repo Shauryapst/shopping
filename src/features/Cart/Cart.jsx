@@ -27,6 +27,7 @@ const Cart = () => {
           {Object.keys(cartItems).map((id) => (
             <CartItem
               key={id}
+              id={id}
               imageUrl={cartItems[id].image}
               quantity={cartItems[id].count}
               price={cartItems[id].price}
