@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CardSmall from "../Card/CardSmall/CardSmall";
 import apiHelper from "../../helper/api.helper";
 import "./CategoryPage.css";
+import Loading from "../Loading/Loading";
 
 const CategoryPage = (props) => {
   const [data, setData] = useState([]);
@@ -43,7 +44,7 @@ const CategoryPage = (props) => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading/>;
   }
 
   if (error) {
