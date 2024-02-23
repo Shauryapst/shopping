@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
-// import SlidingBanners from '../../components/SlidingBanners/SlidingBanners';
-import homeimage from '../../assets/home/6974874_4399.jpg'
+import React, { useEffect, useState } from "react";
+import SlidingBanners from "../../components/SlidingBanners/SlidingBanners";
+import homeimage from "../../assets/home/6974874_4399.jpg";
 
-
-import './Home.css'; // Import the CSS file for Home
+import "./Home.css"; // Import the CSS file for Home
 
 const Home = () => {
-  const [imageLoaded, setImageLoaded] = useState(false); 
+  const [imageLoaded, setImageLoaded] = useState(false);
   const [blurredImageLoaded, setBlurredImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -25,20 +24,8 @@ const Home = () => {
   return (
     <div className="home">
       <div className="image-container">
-      {imageLoaded ? (
-          <img src={homeimage} alt="Homepage" className="homepage-image" />
-        ) : (
-          blurredImageLoaded && (
-            <img
-              src="https://placehold.co/600x400"
-              alt="Homepage (Blurred)"
-              className="homepage-image"
-            />
-          )
-        )}
+        <SlidingBanners />
       </div>
-      {/* <SlidingBanners /> */}
- 
     </div>
   );
 };
