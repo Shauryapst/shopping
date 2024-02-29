@@ -2,11 +2,14 @@
 .home {
     margin: 0 auto;
     padding: 20px;
+    color: black;
+    height: 100%;
   }
   
   .image-container {
     width: 100%; 
     position: relative;
+    height: 100%;
     
   }
   
@@ -23,5 +26,9 @@
     height: auto;
     filter: blur(20px); 
     transition: filter 0.3s ease-in-out;
+  }
+  .ad{
+    height: 25px;
+    
   }
   

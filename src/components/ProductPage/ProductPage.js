@@ -4,6 +4,7 @@ import apiHelper from "../../helper/api.helper";
 import "./ProductPage.css";
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from "../../slices/cartSlice";
+import Loading from "../Loading/Loading";
 
 const ProductPage = () => {
   const dispatch = useDispatch();
@@ -58,7 +59,7 @@ const ProductPage = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading/>;
   }
 
   if (error) {

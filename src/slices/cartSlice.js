@@ -13,26 +13,31 @@ const cartSlice = createSlice({
     addToCart: (state, action) => {
       const {quantity, ...item} = action.payload;
       const id = item.id;
-
+      console.log(item)
       const existingItem = state.cartItems[id];
       const count = existingItem ? existingItem.count + quantity : quantity;
       state.count += quantity;
-      state.cartItems[id] = { ...item, count };
+      if(existingItem){
+        state.cartItems[id] = { ...existingItem , count };
+      }
+      else{
+        state.cartItems[id] = { ...item, count };
+      }
+      
       state.totalPrice += item.price*quantity;
     },
     removeFromCart: (state, action) => {
-      const {...item} = action.payload;
-      const {id, price} = item;
+      const {id} = action.payload;
       const existingItem = state.cartItems[id];
       if (!existingItem) return;
       const count = Math.max(existingItem.count - 1, 0);
-      if (count === 0) {
+      if (count === -1) {
         delete state.cartItems[id];
       } else {
         state.cartItems[id].count = count;
       }
       state.count -= 1;
-      state.totalPrice = Math.max(state.totalPrice - price, 0);
+      state.totalPrice = Math.max(state.totalPrice - existingItem.price, 0);
     },
     clearCart: (state) => {
       state.count = 0;
