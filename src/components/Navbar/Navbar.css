@@ -9,16 +9,16 @@
 }
 
 .navbar-content {
-  max-width: 960px;
-  margin: 0 auto;
+  margin: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .website-name {
-
   font-size: 40px;
   font-weight: 400;
-  font-family: "PT Serif",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
-
+  font-family: "PT Serif", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 
 .menu {
@@ -44,7 +44,6 @@
   display: block;
   padding: 0.5rem 1rem;
   color: black;
-
   transition: background-color 0.3s ease;
   text-decoration: none; /* Remove default underline */
 }
@@ -53,8 +52,44 @@
   font-weight: 400;
   color: rgb(78, 76, 76);
 }
+
 .menu-item a:focus {
   color: rgb(63, 63, 63);
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+
+}
+
+.dropdown-toggle::after {
+  content: '\25BC'; /* Downward arrow */
+  margin-left: 0.5rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  list-style: none;
+  display: none;
+  text-align: left;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-menu{
+  display: block;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f9f9f9;
+  color: rgb(78, 76, 76);
 }
 
 .cart-icon-container .cart-count {

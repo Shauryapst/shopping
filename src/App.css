@@ -17,10 +17,29 @@
 
 .center-section{
   text-align: center;
-  margin-top: 200px;
+  margin-top: 150px;
   flex: 1;
 }
 
 .footer{
   margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 0 10px; 
+  }
+
+  .nav-section {
+    justify-content: space-between;
+    padding: 10px; 
+  }
+
+  .center-section {
+    padding: 10px; 
+  }
+
+  .footer {
+    padding: 10px; 
+  }
 }
