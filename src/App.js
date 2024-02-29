@@ -17,12 +17,12 @@ const App = () => {
     <Router>
       <div className="app">
         {/* Navbar */}
-        <section className="nav-section">
+        <div className="nav-section">
           <Navbar />
-        </section>
+        </div>
 
         {/* Center Section */}
-        <section className="center-section">
+        <div className="center-section">
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/category/men" component={Men} />
@@ -34,13 +34,12 @@ const App = () => {
               component={ProductPage}
             />
           </Switch>
-        </section>
+        </div>
         <Cart/>
-        {/* Rest of your application content */}
-        {/* Add more sections as needed */}
-        <section className="footer">
+
+        <div className="footer">
           <Footer />
-        </section>
+        </div>
       </div>
     </Router>
   );
